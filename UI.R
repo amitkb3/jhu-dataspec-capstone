@@ -22,7 +22,7 @@ shinyUI(pageWithSidebar(
         textOutput("textOutput"))
       ),
       tabPanel("Instructions", p("Type stuff in")),
-      tabPanel("About", p("Made today"))
+      tabPanel("About", p("Made today"), p(HTML('The "Rock Paper Scissors" algorithm is trivial, and a nod to <a href="http://www.gametheory.net/popular/reviews/Simpsons.html">The Simpsons</a>')))
     )
   )
 ))

@@ -9,7 +9,7 @@ predict <- function(algo, inputText, input) {
     if (length(input$rpsPlayer) == 0) {
       sample(c('Rock', 'Paper', 'Scissors'), 1)
     } else if (input$rpsPlayer == 'Bart') {
-      'Rock (What could beat Rock?)'
+      "Rock (Good ol' rock. Nuthin' beats that!)"
     } else if (input$rpsPlayer == 'Lisa') {
       'Paper (Bart always plays Rock!)'
     } else {
