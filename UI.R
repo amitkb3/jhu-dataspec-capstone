@@ -21,8 +21,23 @@ shinyUI(pageWithSidebar(
         textInput('textInput', "Text Input"),
         textOutput("textOutput"))
       ),
-      tabPanel("Instructions", p("Type stuff in")),
-      tabPanel("About", p("Made today"), p(HTML('The "Rock Paper Scissors" algorithm is trivial, and a nod to <a href="http://www.gametheory.net/popular/reviews/Simpsons.html">The Simpsons</a>')))
+      tabPanel("Instructions", p("Type stuff in to the text input box on the 'Prediction' tab. Try varying the prediction algorithm using the sidebar controls.")),
+      tabPanel("Bibliography", HTML('
+        <ol>
+          <li><a href="http://cran.r-project.org/web/packages/tm/tm.pdf">http://cran.r-project.org/web/packages/tm/tm.pdf</a></li>
+          <li><a href="http://www.slideshare.net/jaganadhg/elements-of-text-mi">http://www.slideshare.net/jaganadhg/elements-of-text-mi</a></li>
+          <li><a href="http://beyondvalence.blogspot.com/search/label/text%20mining">http://beyondvalence.blogspot.com/search/label/text%20mining</a></li>
+          <li><a href="http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams">http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams</a></li>
+          <li><a href="http://shiny.rstudio.com/articles/reactivity-overview.html">http://shiny.rstudio.com/articles/reactivity-overview.html</a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href="http://www.gametheory.net/popular/reviews/Simpsons.html">http://www.gametheory.net/popular/reviews/Simpsons.html</a></li>
+        </ol>
+                                    ')),
+      tabPanel("About", p(HTML('Code can be found at <a href="https://github.com/russennis/jhu-dataspec-capstone">https://github.com/russennis/jhu-dataspec-capstone</a>.')), p(HTML('The "Rock Paper Scissors" algorithm is trivial, and a nod to <a href="http://www.gametheory.net/popular/reviews/Simpsons.html">The Simpsons</a>')))
     )
   )
 ))
