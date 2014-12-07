@@ -1,10 +1,25 @@
 library(shiny)
 
+source("LoadModel.R")
+
 algorithms <- c('ngram', 'Rock Paper Scissors')
 predict <- function(algo, inputText, input) {
   cat('Predicting for', algo, inputText, "\n")
   if ((length(algo) == 0) || (algo == 'ngram')) {
-    'the'
+    ngc <- input$ngramComplexity
+    if (is.null(inputText) || (str_length(inputText) == 0)) {
+      'the'
+    } else if ((length(ngc) == 0) || (ngc == 'all')) {
+      predictAll(inputText)
+    } else if (ngc == 'bigram') {
+      bigramPredict(inputText)
+    } else if (ngc == 'trigram') {
+      trigramPredict(inputText)
+    } else if (ngc == 'quadgram') {
+      quadgramPredict(inputText)
+    } else {
+      'the'
+    }
   } else if (algo == 'Rock Paper Scissors') {
     if (length(input$rpsPlayer) == 0) {
       sample(c('Rock', 'Paper', 'Scissors'), 1)
@@ -31,7 +46,7 @@ shinyServer(
       cat('Choice:', algoChoice(), "\n")
       if ((length(algoChoice()) == 0) || (as.character(algoChoice()) == 'ngram')) {
         cat("Rendering ngram\n")
-        selectInput('ngramComplexity', "ngram complexity", c('bigram', 'trigram'))
+        selectInput('ngramComplexity', "ngram complexity", c('all', 'bigram', 'trigram', 'quadgram'))
       } else 
       if (algoChoice() == 'Rock Paper Scissors') {
         cat("Rendering RPS\n")

@@ -29,8 +29,11 @@ shinyUI(pageWithSidebar(
           <li><a href="http://beyondvalence.blogspot.com/search/label/text%20mining">http://beyondvalence.blogspot.com/search/label/text%20mining</a></li>
           <li><a href="http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams">http://stackoverflow.com/questions/8161167/what-algorithm-i-need-to-find-n-grams</a></li>
           <li><a href="http://shiny.rstudio.com/articles/reactivity-overview.html">http://shiny.rstudio.com/articles/reactivity-overview.html</a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href="http://stackoverflow.com/questions/21921422/row-sum-for-large-term-document-matrix-simple-triplet-matrix-tm-package">http://stackoverflow.com/questions/21921422/row-sum-for-large-term-document-matrix-simple-triplet-matrix-tm-package</a></li>
+          <li><a href="http://stackoverflow.com/questions/17703553/bigrams-instead-of-single-words-in-termdocument-matrix-using-r-and-rweka">http://stackoverflow.com/questions/17703553/bigrams-instead-of-single-words-in-termdocument-matrix-using-r-and-rweka</a></li>
+          <li><a href="http://stackoverflow.com/questions/6025051/extracting-indices-for-data-frame-rows-that-have-max-value-for-named-field">http://stackoverflow.com/questions/6025051/extracting-indices-for-data-frame-rows-that-have-max-value-for-named-field</a></li>
+          <li><a href="http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument">http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument</a></li>
+          <li>Creating a hash table: <a href="http://stackoverflow.com/questions/7804816/how-to-create-a-dictionary-hash-table-by-iterating-through-a-column">http://stackoverflow.com/questions/7804816/how-to-create-a-dictionary-hash-table-by-iterating-through-a-column</a></li>
           <li><a href=""></a></li>
           <li><a href=""></a></li>
           <li><a href=""></a></li>
