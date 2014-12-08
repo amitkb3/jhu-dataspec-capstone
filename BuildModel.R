@@ -1,5 +1,5 @@
 # BuildModel
-setwd("/Users/rennis/Coursera/jhu-data-spec-capstone")
+#setwd("/Users/rennis/Coursera/jhu-data-spec-capstone")
 # source("jhu-dataspec-capstone/BuildModel.R")
 suppressWarnings(library(stringi))
 suppressWarnings(library(stringr))

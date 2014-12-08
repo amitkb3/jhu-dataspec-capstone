@@ -1,4 +1,7 @@
 library(shiny)
+library(stringr)
+library(tm)
+library(RWeka)
 
 source("LoadModel.R")
 
