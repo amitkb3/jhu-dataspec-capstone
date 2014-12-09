@@ -4,11 +4,19 @@ library(tm)
 library(RWeka)
 
 source("LoadModel.R")
+source("LoadJavaModel.R")
 
-algorithms <- c('ngram', 'Rock Paper Scissors')
+algorithms <- c('java', 'ngram', 'Rock Paper Scissors')
 predict <- function(algo, inputText, input) {
   cat('Predicting for', algo, inputText, "\n")
-  if ((length(algo) == 0) || (algo == 'ngram')) {
+  if ((length(algo) == 0) || (algo == 'java')) {
+    predictor <- if (length(input$javaPredictor) == 0) {
+      'default'
+    } else {
+      input$javaPredictor
+    }
+    jPredict(predictor, inputText)
+  } else if (algo == 'ngram') {
     ngc <- input$ngramComplexity
     if (is.null(inputText) || (str_length(inputText) == 0)) {
       'the'
@@ -50,10 +58,12 @@ shinyServer(
       if ((length(algoChoice()) == 0) || (as.character(algoChoice()) == 'ngram')) {
         cat("Rendering ngram\n")
         selectInput('ngramComplexity', "ngram complexity", c('all', 'bigram', 'trigram', 'quadgram'))
-      } else 
-      if (algoChoice() == 'Rock Paper Scissors') {
+      } else if (algoChoice() == 'Rock Paper Scissors') {
         cat("Rendering RPS\n")
         selectInput('rpsPlayer', "Player", c('Random', 'Bart', 'Lisa'))
+      } else if (algoChoice() == 'java') {
+        cat("Rendering java\n")
+        selectInput('javaPredictor', "Predictor", c('default'))
       } else {
         renderText(paste("Unrecognized algorithm", algoChoice()))
       }

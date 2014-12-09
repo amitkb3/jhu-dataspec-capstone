@@ -3,9 +3,9 @@ package io.shinyapps.russ.ngram.predict;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PredictMain {
+public class PredictMain implements Predictor {
 
-	private static Map<String, Predictor> _predictors = new HashMap<>();
+	private static Map<String, Predictor> _predictors = new HashMap<String, Predictor>();
 	
 	static {
 		_predictors.put("default", new Predictor() {
@@ -22,5 +22,13 @@ public class PredictMain {
 	
 	public static String predict(String predictor, String inputText) {
 		return _predictors.get(predictor).predict(inputText);
+	}
+	
+	private final Predictor _predictor;
+	public PredictMain(String predictor) {
+		_predictor = _predictors.get(predictor);
+	}
+	public String predict(String inputText) {
+		return _predictor.predict(inputText);
 	}
 }
