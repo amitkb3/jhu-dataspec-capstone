@@ -81,8 +81,6 @@ itself; it predicts the static string "Java" (using Java; woo!).</p>
           <li><a href="http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument">http://stackoverflow.com/questions/24191728/documenttermmatrix-error-on-corpus-argument</a></li>
           <li><a href="http://stackoverflow.com/questions/7804816/how-to-create-a-dictionary-hash-table-by-iterating-through-a-column">http://stackoverflow.com/questions/7804816/how-to-create-a-dictionary-hash-table-by-iterating-through-a-column</a></li>
           <li><a href="http://en.wikipedia.org/wiki/Katz%27s_back-off_model">http://en.wikipedia.org/wiki/Katz%27s_back-off_model</a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
           <li><a href="http://www.gametheory.net/popular/reviews/Simpsons.html">http://www.gametheory.net/popular/reviews/Simpsons.html</a></li>
         </ol>
                                     ')),
