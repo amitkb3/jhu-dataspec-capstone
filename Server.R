@@ -6,17 +6,10 @@ library(RWeka)
 source("LoadModel.R")
 source("LoadJavaModel.R")
 
-algorithms <- c('java', 'ngram', 'Rock Paper Scissors')
+algorithms <- c('ngram', 'java', 'Rock Paper Scissors')
 predict <- function(algo, inputText, input) {
   cat('Predicting for', algo, inputText, "\n")
-  if ((length(algo) == 0) || (algo == 'java')) {
-    predictor <- if (length(input$javaPredictor) == 0) {
-      'default'
-    } else {
-      input$javaPredictor
-    }
-    jPredict(predictor, inputText)
-  } else if (algo == 'ngram') {
+  if ((length(algo) == 0) || (algo == 'ngram')) {
     ngc <- input$ngramComplexity
     if (is.null(inputText) || (str_length(inputText) == 0)) {
       'the'
@@ -31,6 +24,13 @@ predict <- function(algo, inputText, input) {
     } else {
       'the'
     }
+  } else if (algo == 'java') {
+    predictor <- if (length(input$javaPredictor) == 0) {
+      'default'
+    } else {
+      input$javaPredictor
+    }
+    jPredict(predictor, inputText)
   } else if (algo == 'Rock Paper Scissors') {
     if (length(input$rpsPlayer) == 0) {
       sample(c('Rock', 'Paper', 'Scissors'), 1)

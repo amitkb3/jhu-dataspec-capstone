@@ -11,7 +11,7 @@ public class PredictMain implements Predictor {
 		_predictors.put("default", new Predictor() {
 			@Override
 			public String predict(String inputText) {
-				return "the";
+				return "Java";
 			}
 		});
 	}
